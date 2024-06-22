@@ -15,36 +15,40 @@ public class practiceFunction {
         int product = a * b;
         return product;
     }
-    public static int factorial(int a){
-        int factorial=1;
-        for (int i=1;i<=a;a--){
-            factorial=factorial*a;
+
+    public static int factorial(int a) {
+        int factorial = 1;
+        for (int i = 1; i <= a; a--) {
+            factorial = factorial * a;
         }
-                return factorial;
+        return factorial;
     }
-    public static int bicof(int n,int r){
-        int fact_n=factorial(n);
-        int fact_r=factorial(r);
-        int nmr=factorial(n-r);
-        int bicoef=fact_n/(fact_r*(nmr));
+
+    public static int bicof(int n, int r) {
+        int fact_n = factorial(n);
+        int fact_r = factorial(r);
+        int nmr = factorial(n - r);
+        int bicoef = fact_n / (fact_r * (nmr));
         return bicoef;
     }
-    //prime number
-    public static boolean isPrime(int n){
-        if (n==2){
+
+    // prime number
+    public static boolean isPrime(int n) {
+        if (n == 2) {
             return true;
         }
-        for(int i=2;i<=n-1;i++){
-            if(n%i==0){
+        for (int i = 2; i <= n - 1; i++) {
+            if (n % i == 0) {
                 return false;
             }
         }
         return true;
     }
+
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
-        //int b = sc.nextInt();
+        // int b = sc.nextInt();
         System.out.println(isPrime(a));
 
     }
