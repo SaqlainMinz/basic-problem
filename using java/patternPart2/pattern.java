@@ -13,6 +13,7 @@ public class pattern {
         }
 
     }
+    //Inverted and rotated half pyramid
 
     public static void main(String[] args) {
         hollow_rectangle(5, 4);
