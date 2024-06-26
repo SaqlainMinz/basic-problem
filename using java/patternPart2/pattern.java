@@ -17,11 +17,11 @@ public class pattern {
     // Inverted and rotated half pyramid
     public static void inverted_halfPyramind(int n) {
         for (int i = 1; i <= n; i++) {
-            for (int j = 1; j <= n-i; j++) {
+            for (int j = 1; j <= n - i; j++) {
                 System.out.print("   ");
 
             }
-            for(int j=1;j<=i;j++){
+            for (int j = 1; j <= i; j++) {
                 System.out.print(" * ");
             }
             System.err.println();
@@ -29,7 +29,18 @@ public class pattern {
 
     }
 
+    // Inverted half pyramind with number
+    public static void num_invertedHalfPyramid(int n) {
+        for (int i = 1; i <= n; i++) {
+            for (int j = 1; j <= n - i + 1; j++) {
+                System.out.print(" " + j + " ");
+
+            }
+            System.out.println();
+        }
+    }
+
     public static void main(String[] args) {
-inverted_halfPyramind(5);
+        num_invertedHalfPyramid(5);
     }
 }
