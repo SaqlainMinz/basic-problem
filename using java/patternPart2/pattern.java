@@ -91,6 +91,6 @@ public class pattern {
     }
 
     public static void main(String[] args) {
-        butterfly(5);
+        butterfly(50);
     }
 }
