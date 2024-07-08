@@ -43,6 +43,7 @@ public class pattern {
     // Floyd's Triangle
     public static void floyds(int n) {
         int sum = 1;
+
         for (int i = 1; i <= n; i++) {
 
             for (int j = 1; j <= i; j++) {
@@ -51,6 +52,22 @@ public class pattern {
                 sum++;
             }
 
+            System.out.println();
+        }
+    }
+
+    // 0-1 pattern
+    public static void traingle(int n) {
+        for (int i = 1; i <= n; i++) {
+            int s = i;
+            for (int j = 1; j <= i; j++) {
+                if (s % 2 != 0) {
+                    System.out.print(" 1 ");
+                } else {
+                    System.out.print(" 0 ");
+                }
+                s--;
+            }
             System.out.println();
         }
     }
@@ -91,6 +108,8 @@ public class pattern {
     }
 
     public static void main(String[] args) {
-        butterfly(5);
+        // butterfly(5);
+        // floyds(5);
+        traingle(5);
     }
 }
