@@ -132,11 +132,38 @@ public class pattern {
             }
             // star
             for (int j = 1; j <= n; j++) {
-                if(i==1||j==1||i==n||j==n){
+                if (i == 1 || j == 1 || i == n || j == n) {
                     System.out.print("*");
-                }else{
+                } else {
                     System.out.print(" ");
                 }
+            }
+            System.out.println();
+        }
+
+    }
+
+    // diamond pattern
+    public static void diamond(int n) {
+        for (int i = 1; i <= n; i++) {
+            // spaces
+            for (int j = 1; j <= (n - i); j++) {
+                System.out.print(" ");
+            }
+            // star
+            for (int j = 1; j <= ((2 * i) - 1); j++) {
+                System.out.print("*");
+            }
+            System.out.println();
+        }
+        for (int i = n; i >= 1; i--) {
+            // spaces
+            for (int j = 1; j <= (n - i); j++) {
+                System.out.print(" ");
+            }
+            // star
+            for (int j = 1; j <= ((2 * i) - 1); j++) {
+                System.out.print("*");
             }
             System.out.println();
         }
@@ -148,6 +175,7 @@ public class pattern {
         // floyds(5);
         // zero_One_Traingle(5);
         // solid_Rhombus(5);
-        hollow_rhombus(5);
+        // hollow_rhombus(5);
+        diamond(4);
     }
 }
