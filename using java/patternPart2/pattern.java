@@ -57,7 +57,7 @@ public class pattern {
     }
 
     // 0-1 pattern
-    public static void traingle(int n) {
+    public static void zero_One_Traingle(int n) {
         for (int i = 1; i <= n; i++) {
             int s = i;
             for (int j = 1; j <= i; j++) {
@@ -106,26 +106,48 @@ public class pattern {
             System.out.println();
         }
     }
-    //solid rhombus
-    public static void rhombus(int n){
-        //outer loop
-        for(int i=1; i<=n;i++){
-            //spaces
-            for(int j=1;j<=n-i;j++){
+
+    // solid rhombus
+    public static void solid_Rhombus(int n) {
+        // outer loop
+        for (int i = 1; i <= n; i++) {
+            // spaces
+            for (int j = 1; j <= n - i; j++) {
                 System.out.print(" ");
             }
-            //star
-            for(int j=1;j<=n;j++){
+            // star
+            for (int j = 1; j <= n; j++) {
                 System.out.print("*");
             }
             System.out.println();
         }
     }
 
+    // hollow rhombus
+    public static void hollow_rhombus(int n) {
+        for (int i = 1; i <= n; i++) {
+            // spaces
+            for (int j = 1; j <= n - i; j++) {
+                System.out.print(" ");
+            }
+            // star
+            for (int j = 1; j <= n; j++) {
+                if(i==1||j==1||i==n||j==n){
+                    System.out.print("*");
+                }else{
+                    System.out.print(" ");
+                }
+            }
+            System.out.println();
+        }
+
+    }
+
     public static void main(String[] args) {
         // butterfly(5);
         // floyds(5);
-        //traingle(5);
-        rhombus(5);
+        // zero_One_Traingle(5);
+        // solid_Rhombus(5);
+        hollow_rhombus(5);
     }
 }
