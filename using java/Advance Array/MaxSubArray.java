@@ -54,9 +54,22 @@ public class MaxSubArray {
 
     }
 
+    public static void kSubArray(int num[]) {
+        // KADEN'S ALGORITHM
+        int currSum = 0, maxSum = Integer.MIN_VALUE;
+        for (int i = 0; i < num.length; i++) {
+            currSum=currSum+num[i];
+            if(currSum<0){
+                currSum=0;
+            }
+            maxSum=Math.max(currSum,maxSum);
+        }
+        System.out.println(maxSum);
+    }
+
     public static void main(String[] args) {
-        int number[] = { 1, 2, 4, 5, 6, 8, 7, 9, 2 };
-        preMaxSubArray(number);
+        int number[] = { -2,-3,4,-1,-2,1,5,-3 };
+        kSubArray(number);
 
     }
 }
