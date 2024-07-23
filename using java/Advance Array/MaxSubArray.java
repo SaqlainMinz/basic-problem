@@ -1,5 +1,3 @@
-import java.util.*;
-
 public class MaxSubArray {
     public static void maxSubArray(int num[]) {
         // normal method(Brut Force)
@@ -58,17 +56,17 @@ public class MaxSubArray {
         // KADEN'S ALGORITHM
         int currSum = 0, maxSum = Integer.MIN_VALUE;
         for (int i = 0; i < num.length; i++) {
-            currSum=currSum+num[i];
-            if(currSum<0){
-                currSum=0;
+            currSum = currSum + num[i];
+            if (currSum < 0) {
+                currSum = 0;
             }
-            maxSum=Math.max(currSum,maxSum);
+            maxSum = Math.max(currSum, maxSum);
         }
         System.out.println(maxSum);
     }
 
     public static void main(String[] args) {
-        int number[] = { -2,-3,4,-1,-2,1,5,-3 };
+        int number[] = { -2, -3, 4, -1, -2, 1, 5, -3 };
         kSubArray(number);
 
     }
