@@ -28,6 +28,14 @@ public class TrappingRainWater {
             }
             System.out.println("right " + max_right[i]);
         }
+        //water level
+        int waterlevel[]=new int[number.length];
+        int trapWater[]=new int[number.length];
+        for (int i = 0; i < number.length; i++) {
+            waterlevel[i]=Math.min(max_left[i], max_right[i]);
+            trapWater[i]=(waterlevel[i]-number[i]);
+            System.out.println("trapwater "+trapWater[i]);
+        }
 
     }
 
