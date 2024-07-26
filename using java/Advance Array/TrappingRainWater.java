@@ -10,8 +10,9 @@ public class TrappingRainWater {
                 max_left[i] = maxLeft;
             }
             else{
-
+                max_left[i]=Math.max(max_left[i-1],max_left[i]);
             }
+         
             System.out.println("left " + max_left[i]);
 
         }
@@ -21,6 +22,9 @@ public class TrappingRainWater {
             if (number[i] > maxRight) {
                 maxRight = number[i];
                 max_right[i] = maxRight;
+            }
+            else{
+                max_right[i]=Math.max(max_right[i+1],max_right[i]);
             }
             System.out.println("right " + max_right[i]);
         }
