@@ -40,7 +40,7 @@ public class TrappingRainWater {
     }
 
     public static void main(String[] args) {
-        int num[]={4,2,0,6,3,2,5};
+        int num[]={4,2,0,6,2,3,5};
         trappingRainWater(num);
       
 
